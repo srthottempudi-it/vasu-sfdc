@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Meta Data Vs Custom Settings</title>
+    <style>
+       p {
+		line-height: 1.5; 
+	}
+    </style>
+</head>
+<body>
+	<a href="index.html"><h2>Home</h2></a>
+    <h1><u>Custom MetaData!</u></h1>
+    <p style=" margin-left:2em; color: blue; font-size: 30px;">
+	<strong><b>It has a suffix of “__mdt”.<br>Custom metadata does not support Hierarchy type of data based on user profile or a specific user.<br>
+	Custom metadata types data can be easily packaged and deployed. Metadata types can also be deployed via Change Sets/Metadata API.<br>
+	Create lookups between Custom Metadata objects <br>visible in test class without the “SeeAllData” annotation.<br>cannot perform CUD (Create, Update, Delete) operation on custom metadata type in apex.<br>With custom metadata types, you can issue unlimited (SOQL) queries for each Apex transaction. But methods ( getAll(),getInstance()) is also available.<br>
+	Where Custom Metadata Types should be used ==><br>
+	1. Custom Metadata types are configurable data objects so we should use them where application configuration is not changing between org.<br>
+	2. We should use it in AppExchange product to add configuration data. We can give functionality to edit records to the app’s consumer as well using its visibility setting.
+	</strong></p>	
+	<h1><u>Custom Settings!</u></h1>
+	<p style=" margin-left:2em; color: blue; font-size: 30px;"><strong>
+	<b>It has a suffix of “__C” like custom object.<br>Custom Settings are also similar to custom objects. You can either create a List based or hierarchy based custom setting.<br>
+	Custom settings data cannot be deployed using packages or Metadata API/Change Sets.<br>
+	Custom settings do not support relationship fields.<br>Custom setting data is not visible in test classes.<br>You can perform CUD (Create, Update, Delete) operation on custom setting in apex.<br>You can access custom setting data using instance methods and can avoid SOQL queries to database.<br>To fetch the custom fields associated with a list setting, use getAll() method. It returns a map of data set names and custom setting records. <br>To fetch all the field values associated with the specified dataset, use getValues() method. This method can be used for both list and hierarchy settings.<br>To return a custom setting data set record for the current logged in user. Use the getInstance() method.<br>To return a custom setting data set record for a specific userId/ProfileId, Use the getInstance(userId/ProfileId) method.<br>To return the custom setting record data set for the organization, Use the getOrgDefaults() method.<br> Hierarchy custom settings enable you to personalize settings for specific profiles or users while maintaining a global default value, whereas List custom settings will allow you to create a list of values that are accessible throughout your organization.</strong>
+	</p>
+</body>
+</html>
